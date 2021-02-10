@@ -2,7 +2,7 @@
 
 ## Labs
 
-** Source code **
+**Source code**
 ```vhdl
 
 begin{align*}
