@@ -25,3 +25,6 @@ _vobec neviem co robit_
 | 1 | 0 | 1 |  |
 | 1 | 1 | 0 |  |
 | 1 | 1 | 1 |  |
+
+
+[this repository](https://github.com/tomas-fryza/Digital-electronics-1)
