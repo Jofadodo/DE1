@@ -34,6 +34,6 @@ end architecture dataflow;
 | 1 | 1 | 0 | 0 | 0 | 0 |
 | 1 | 1 | 1 | 0 | 0 | 0 |
 
-[EDA playground](https://www.edaplayground.com/x/jBKA)
+
 
 <p align="center"> <a href="https://www.edaplayground.com/x/jBKA">EDA playground</a> </p>
