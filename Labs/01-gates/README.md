@@ -4,7 +4,7 @@
 
 **Výsledné hodnoty**
 
-![Screenshot](/images/eda.jpg)
+![Screenshot výsledných hodnôt](/images/eda.jpg)
 
 Pravdivostná tabuľka
 
