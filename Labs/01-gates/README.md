@@ -21,7 +21,7 @@ end architecture dataflow;
 ```
 
 
-**Logical values table**
+**Logical values tables**
 
 | **c** | **b** |**a** | **f(c,b,a)** | **f(c,b,a)NAND** | **f(c,b,a)NOR** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
