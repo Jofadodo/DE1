@@ -4,7 +4,7 @@
 
 **Výsledné hodnoty**
 
-![Screenshot výsledných hodnôt](/images/eda.jpg)
+![Screenshot výsledných hodnôt](images/eda.JPG)
 
 
 **Source code**
