@@ -21,7 +21,7 @@ end architecture dataflow;
 ```
 
 
-**Pravdivostná tabuľka**
+**Logical values table**
 
 | **c** | **b** |**a** | **f(c,b,a)** | **f(c,b,a)NAND** | **f(c,b,a)NOR** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
