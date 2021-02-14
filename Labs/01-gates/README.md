@@ -6,8 +6,23 @@
 
 ![Screenshot výsledných hodnôt](/images/eda.jpg)
 
-Pravdivostná tabuľka
 
+**Source code**
+```vhdl
+
+begin
+	
+    f_original   <= (not(b_i) and a_i) or (not(c_i) and not(b_i));
+	
+    f_by_nand    <= (a_i nand not(b_i)) nand (not(c_i) nand not(b_i));
+    f_by_nor     <= b_i nor (a_i nor not(c_i));
+
+end architecture dataflow;
+
+```
+
+
+Pravdivostná tabuľka
 
 | **c** | **b** |**a** | **f(c,b,a)** |
 | :-: | :-: | :-: | :-: |
