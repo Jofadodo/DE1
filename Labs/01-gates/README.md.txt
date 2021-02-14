@@ -1,1 +1,0 @@
-tento file sa načíta pri otvorení priečinku v ktorom je
