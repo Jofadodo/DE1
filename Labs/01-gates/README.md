@@ -3,7 +3,8 @@
 ## Lab-1
 
 **Výsledné hodnoty**
-![Screenshot výsledých hodnôt](images/eda.jpg)
+
+![Screenshot](images/eda.jpg)
 
 Pravdivostná tabuľka
 
