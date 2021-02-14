@@ -1,7 +1,6 @@
-# DE1
+# Digital electronics 1 - Lab 1
 
-## Lab-1
-## De Mmorgan´s laws
+## De Morgan´s laws
 
 **Time waveforms**
 
@@ -38,7 +37,7 @@ end architecture dataflow;
 
 
 
-## De Mmorgan´s laws
+## Distributive laws
 
 **Time waveforms**
 
