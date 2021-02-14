@@ -36,4 +36,4 @@ end architecture dataflow;
 
 
 
->[EDA playground](https://www.edaplayground.com/x/jBKA)
+<p align="center"> [EDA playground](https://www.edaplayground.com/x/jBKA) </p>
