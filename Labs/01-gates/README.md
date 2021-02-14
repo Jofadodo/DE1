@@ -1,10 +1,11 @@
 # DE1
 
 ## Lab-1
+## De Mmorgan´s laws
 
 **Time waveforms**
 
-![Screenshot výsledných hodnôt](images/eda.JPG)
+![Screenshot výsledných hodnôt](images/demorgan.JPG)
 
 
 **Source code**
@@ -33,6 +34,44 @@ end architecture dataflow;
 | 1 | 0 | 1 | 1 | 1 | 1 |
 | 1 | 1 | 0 | 0 | 0 | 0 |
 | 1 | 1 | 1 | 0 | 0 | 0 |
+
+
+
+
+## De Mmorgan´s laws
+
+**Time waveforms**
+
+![Screenshot výsledných hodnôt](images/distributive.JPG)
+
+
+**Source code**
+```vhdl
+architecture dataflow of gates is
+begin
+	
+    f_dist_1a    <= (a_i and b_i) or (a_i and c_i);
+    f_dist_1b	 <= a_i and (b_i or c_i);
+    
+    f_dist_2a	 <= (a_i or b_i) and (a_i or c_i);
+    f_dist_2b	 <= a_i or (b_i and c_i);
+
+end architecture dataflow;
+```
+
+
+**Logical values table**
+
+| **c** | **b** |**a** | **f_1a(c,b,a)** | **f_1b(c,b,a)** | **f_2a(c,b,a)** | **f_2b(c,b,a)** |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 1 | 1 |
+| 1 | 1 | 0 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 1 | 1 | 1 |
 
 
 
