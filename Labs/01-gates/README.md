@@ -1,4 +1,4 @@
-# Digital electronics 1 - Lab 1
+# Digital electronics 1 - 01 gates
 
 ## De Morgan´s laws
 
