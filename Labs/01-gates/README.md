@@ -2,7 +2,7 @@
 
 ## Lab-1
 
-**Výsledné hodnoty**
+**Time waveforms**
 
 ![Screenshot výsledných hodnôt](images/eda.JPG)
 
