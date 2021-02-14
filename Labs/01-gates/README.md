@@ -4,12 +4,12 @@
 
 **Výsledné hodnoty**
 
-![Screenshot výsledných hodnôt](images/eda.JPG)
+![Screenshot výsledných hodnôt](/images/eda.jpg)
 
 
 **Source code**
 ```vhdl
-
+architecture dataflow of gates is
 begin
 	
     f_original   <= (not(b_i) and a_i) or (not(c_i) and not(b_i));
@@ -18,7 +18,6 @@ begin
     f_by_nor     <= b_i nor (a_i nor not(c_i));
 
 end architecture dataflow;
-
 ```
 
 
