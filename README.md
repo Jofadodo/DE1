@@ -2,6 +2,7 @@
 
 ## Labs
 *Jozef Fašanga*
+*220812*
 
 [DE1 GitHub repository](https://github.com/tomas-fryza/Digital-electronics-1)
 
