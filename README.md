@@ -1,10 +1,8 @@
 # Digital electronics 1
 
 ## Labs
-Autor:
-
-*Jozef Fašanga*
-
+Autor:  
+*Jozef Fašanga*  
 *220812*
 
 [DE1 GitHub repository](https://github.com/tomas-fryza/Digital-electronics-1)
