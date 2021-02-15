@@ -1,7 +1,7 @@
 # Digital electronics 1
 
 ## Labs
-Autor:  
+**Autor:**  
 *Jozef Fašanga*  
 *220812*
 
