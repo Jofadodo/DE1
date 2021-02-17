@@ -21,3 +21,16 @@
 | 13 | 1 1 | 0 1 | 1 | 0 | 0 |
 | 14 | 1 1 | 1 0 | 1 | 0 | 0 |
 | 15 | 1 1 | 1 1 | 0 | 1 | 0 |
+
+
+
+
+
+
+
+
+
+
+
+<p align="center"> <a href="https://www.edaplayground.com/x/P3vQ">EDA playground</a> </p>
+<p align="center"> <a href="https://github.com/Jofadodo/Digital-electronics-1">GitHub repository</a> </p>
