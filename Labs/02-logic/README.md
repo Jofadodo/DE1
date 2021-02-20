@@ -2,7 +2,7 @@
 
 ## 2 - bit comparator
 
-<hr>
+
 <br>
 
 **Truth table**
@@ -43,7 +43,7 @@
 
 ## 4 - bit comparator
 
-<hr>
+
 <br>
 
 **Source code of archytecture syntax**
