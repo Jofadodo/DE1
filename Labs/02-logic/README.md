@@ -29,10 +29,10 @@
 
 
 
-
 <br>
 <br>
 <br>
 
-<p align="center"> <a href="https://www.edaplayground.com/x/P3vQ">EDA playground</a> </p>
+<p align="center"> <a href="https://www.edaplayground.com/x/P3vQ">EDA playground 2-bit</a> </p>
+<p align="center"> <a href="https://www.edaplayground.com/x/NKMz">EDA playground 4-bit</a> </p>
 <p align="center"> <a href="https://github.com/Jofadodo/Digital-electronics-1">GitHub repository</a> </p>
