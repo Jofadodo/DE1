@@ -46,7 +46,7 @@
 
 <br>
 
-**Source code of archytecture syntax**
+**Source code of architecture syntax**
 ```vhdl
 architecture Behavioral of comparator_4bit is
 begin
