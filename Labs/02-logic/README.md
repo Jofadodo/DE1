@@ -25,7 +25,7 @@
 | 14 | 1 1 | 1 0 | 1 | 0 | 0 |
 | 15 | 1 1 | 1 1 | 0 | 1 | 0 |
 
-![Rovnica](images/equalSoP.PNG) 
+![Rovnica](images/equalSoP.png) 
 
 <br>
 
