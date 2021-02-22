@@ -33,6 +33,10 @@
 
 **Karnaugh maps**
 
+![Mapa](images/k-mapEqual.JPG)  
+
+<br>
+
 ![Mapa](images/k-mapGreater.JPG)  
 ![Rovnica](images/greaterSoP.gif)  
 
