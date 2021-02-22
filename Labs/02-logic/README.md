@@ -25,18 +25,19 @@
 | 14 | 1 1 | 1 0 | 1 | 0 | 0 |
 | 15 | 1 1 | 1 1 | 0 | 1 | 0 |
 
+![Rovnica](images/equalSoP.PNG) 
+
 <br>
 
 **Karnaugh maps**
 
-![Rovnica](images/k-mapGreater.JPG)  
+![Mapa](images/k-mapGreater.JPG)  
 ![Rovnica](images/greaterSoP.gif)  
 
 <br>
 
-![Rovnica](images/k-mapLess.JPG)  
+![Mapa](images/k-mapLess.JPG)  
 ![Rovnica](images/lessPoS.gif)
-
 
 
 
