@@ -29,7 +29,13 @@
 
 **Karnaugh maps**
 
-![Rovnica](images/greaterSoP.gif)
+![Rovnica](images/k-mapGreater.JPG)
+![Rovnica](images/greaterSoP.gif)  
+
+<br>
+
+![Rovnica](images/k-mapLess.JPG)
+![Rovnica](images/lessPoS.gif)
 
 
 
