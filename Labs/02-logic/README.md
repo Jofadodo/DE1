@@ -27,7 +27,7 @@
 
 ![Rovnica](images/equalSoP_1.png)  
 
-![Rovnica](images/lessPos_1.png) 
+![Rovnica](images/lessPoS_1.png) 
 
 <br>
 
