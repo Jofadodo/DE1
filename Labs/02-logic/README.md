@@ -45,6 +45,11 @@
 ![Mapa](images/k-mapLess.JPG)  
 ![Rovnica](images/lessPoS.gif)
 
+**EDA output**
+![EDA](images/2-bit_EDA.JPG)  
+
+
+<p align="center"> <a href="https://www.edaplayground.com/x/P3vQ">EDA playground 2-bit</a> </p>
 
 
 
@@ -58,6 +63,9 @@
 
 
 <br>
+
+**EDA output**
+![EDA](images/4-bit_EDA.JPG)  
 
 **Source code of architecture syntax**
 ```vhdl
@@ -112,11 +120,27 @@ begin
 end process p_stimulus;
 ```
 
+**Listing of simulator console output**
+```vhdl
+[2021-02-22 13:30:05 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_2bit && ghdl -r  tb_comparator_2bit   --vcd=dump.vcd && sed -i 's/^U/X/g; s/^-/X/g; s/^H/1/g; s/^L/0/g' dump.vcd 
+analyze design.vhd
+analyze testbench.vhd
+elaborate tb_comparator_2bit
+testbench.vhd:58:9:@0ms:(report note): Stimulus process started
+testbench.vhd:118:9:@1us:(assertion error): Test failed for input combination: 0010, 1000
+testbench.vhd:126:9:@1us:(report note): Stimulus process finished
+Finding VCD file...
+./dump.vcd
+[2021-02-22 13:30:06 EST] Opening EPWave...
+Done
+```
 
-<br>
-<br>
-<br>
-
-<p align="center"> <a href="https://www.edaplayground.com/x/P3vQ">EDA playground 2-bit</a> </p>
 <p align="center"> <a href="https://www.edaplayground.com/x/NKMz">EDA playground 4-bit</a> </p>
+
+<br>
+<br>
+<hr>
+
+
+
 <p align="center"> <a href="https://github.com/Jofadodo/Digital-electronics-1">GitHub repository</a> </p>
