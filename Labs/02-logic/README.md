@@ -37,7 +37,7 @@
 ![Rovnica](images/k-mapLess.JPG)  
 ![Rovnica](images/lessPoS.gif)
 
-
+asdf
 
 
 
