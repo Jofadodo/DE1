@@ -1,0 +1,1 @@
+-wto "87965863f20344a688976b8f57a51285" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "comparator_2bit_behav" "xil_defaultlib.comparator_2bit" -log "elaborate.log" 
