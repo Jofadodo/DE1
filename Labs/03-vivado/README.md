@@ -1,6 +1,8 @@
 # Digital electronics 1 - 03 vivado
 
-## Table with connections
+## Multiplexer 4-to-1
+
+**Table with connections**
 
 | **Connector** | **Pin** | **Program** |
 | :-: | :-: | :-: |
@@ -61,4 +63,4 @@ p_stimulus : process
     end process p_stimulus;
 ```
 
-![Rovnica](images/graf_vivado.JPG)
+![Rovnica](images/graf_vivado.jpg)
