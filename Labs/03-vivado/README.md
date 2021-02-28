@@ -19,6 +19,9 @@
 | LED0 | H17 | f_o |
 | LED1 | K15 | f_o |
 
+![Rovnica](images/schematic1.jpg)
+![Rovnica](images/schematic2.jpg)
+
 <br>
 
 **Source code of architecture syntax**
@@ -63,4 +66,6 @@ p_stimulus : process
     end process p_stimulus;
 ```
 
+**Screenshot with simulated time waveforms**
 ![Rovnica](images/graf_vivado.jpg)
+
