@@ -111,6 +111,9 @@ Type name of file and click OK
 
 **Your project was created**
 
+For run simulation click flow -> run simulation -> run behavioral simulation
+![Tutorial](images/tutorial/17.jpg)
+
 <br>
 <br>
 <hr>
