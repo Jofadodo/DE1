@@ -246,3 +246,11 @@ LED(7)  <= '1' when (SW = "0001" or SW = "0010" or SW = "0100" or SW = "1000") e
 
 **Screenshot with simulated time waveforms**  
 ![waveform2](images/graf2.jpg)
+
+<br>
+<br>
+<hr>
+
+
+
+<p align="center"> <a href="https://github.com/Jofadodo/Digital-electronics-1">GitHub repository</a> </p>
