@@ -22,6 +22,29 @@
 | E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
 | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
 
+**Table with connections**
+
+| **Connector** | **Pin** |
+| :-: | :-: |
+| CA | T10 |
+| CB | R10 |
+| CC | K16 |
+| CD | K13 |
+| CE | P15 |
+| CF | T11 |
+| CG | L18 |
+| DP | H15 |
+| AN[0] | J17 |
+| AN[1] | J18 |
+| AN[2] | T9 |
+| AN[3] | J14 |
+| AN[4] | P14 |
+| AN[5] | T14 |
+| AN[6] | K2 |
+| AN[7] | U13 |
+
+<hr>
+
 **Source code of architecture syntax**
 ```vhdl
 architecture Behavioral of hex_7seg is
@@ -188,9 +211,6 @@ begin
 end Behavioral;
 ```
 
-**Screenshot with simulated time waveforms**  
-![waveform2](images/graf2.jpg)
-
 **Schematic**  
 ![schema](images/schematic.jpg)
 
@@ -223,3 +243,6 @@ LED(5)  <= '1' when (SW > "1001") else '0';
 LED(6)  <= '1' when (SW(0) = '1') else '0';
 LED(7)  <= '1' when (SW = "0001" or SW = "0010" or SW = "0100" or SW = "1000") else '0';
 ```
+
+**Screenshot with simulated time waveforms**  
+![waveform2](images/graf2.jpg)
