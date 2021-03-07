@@ -124,7 +124,7 @@ p_stimulus : process
     end process p_stimulus;
 ```
 
-**Screenshot with simulated time waveforms**
+**Screenshot with simulated time waveforms**  
 ![waveform1](images/graf1.jpg)
 
 **Source code of top file**
