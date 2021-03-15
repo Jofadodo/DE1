@@ -14,7 +14,7 @@
 
 
 
-   **Source code of architecture syntax**
+**Source code of process `p_cnt_up_down`**
 ```vhdl
 p_cnt_up_down : process(clk)
     begin
@@ -38,3 +38,45 @@ p_cnt_up_down : process(clk)
         end if;
     end process p_cnt_up_down;
 ```
+
+**Source code of stimulus process**
+```vhdl
+p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+
+        -- Enable counting
+        s_en     <= '1';
+        
+        -- Change counter direction
+        s_cnt_up <= '1';
+        wait for 380 ns;
+        s_cnt_up <= '0';
+        wait for 220 ns;
+
+        -- Disable counting
+        s_en     <= '0';
+
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+```
+
+**Source code of reset process**
+```vhdl
+p_reset_gen : process
+    begin
+        s_reset <= '0';
+        wait for 12 ns;
+        
+        -- Reset activated
+        s_reset <= '1';
+        wait for 73 ns;
+
+        s_reset <= '0';
+        wait;
+    end process p_reset_gen;
+```
+
+**Screenshot with simulated time waveforms**  
+![waveform1](images/graf.jpg)
