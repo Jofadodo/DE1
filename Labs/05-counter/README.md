@@ -12,7 +12,10 @@
    | 500&nbsp;ms | 50 000 000 | `x"2FA_F080"` | `b"0010_1111_1010_1111_0000_1000_0000"` |
    | 1&nbsp;sec | 100 000 000 | `x"5F5_E100"` | `b"0101_1111_0101_1110_0001_0000_0000"` |
 
+**Figure connection of push buttons**  
+![buttons](images/buttons.jpg)
 
+<hr>
 
 **Source code of process `p_cnt_up_down`**
 ```vhdl
