@@ -1,4 +1,4 @@
-# Digital electronics 1 - 04 segment
+# Digital electronics 1 - 05 counter
 
 ## Binary counter
 
