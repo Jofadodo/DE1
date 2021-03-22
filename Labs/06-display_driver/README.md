@@ -218,3 +218,11 @@ end architecture Behavioral;
 
 **Image of the driver schematic**  
 ![waveform](images/driver.png)
+
+<br>
+<br>
+<hr>
+
+
+
+<p align="center"> <a href="https://github.com/Jofadodo/Digital-electronics-1">GitHub repository</a> </p>
