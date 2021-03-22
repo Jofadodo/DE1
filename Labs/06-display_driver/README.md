@@ -2,7 +2,7 @@
 
 ## Driver for multiple seven-segment displays
 
-**Timing diagraf figure**  
+**Timing diagram figure**  
 ![diagram](images/wavedrom.png)
 
 <hr>
@@ -216,5 +216,5 @@ end architecture Behavioral;
 
 <hr>
 
-**Image of the driver schematic**
+**Image of the driver schematic**  
 ![waveform](images/driver.png)
