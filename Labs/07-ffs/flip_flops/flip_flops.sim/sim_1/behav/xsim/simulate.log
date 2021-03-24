@@ -1,0 +1,48 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 89 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 89 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 178 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 178 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 267 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 267 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 356 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 356 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 445 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 445 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 534 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 534 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 623 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 623 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 712 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 712 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 801 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 801 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 890 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 890 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process finished
+Time: 979 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
+Note: Stimulus process started
+Time: 979 ns  Iteration: 0  Process: /tb_jk_ff_rst/p_stimulus  File: C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/07-ffs/flip_flops/flip_flops.srcs/sim_1/new/tb_jk_ff_rst.vhd
