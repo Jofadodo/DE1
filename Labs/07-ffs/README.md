@@ -31,6 +31,9 @@
 | 1 | 0 | 1 | Invertor |
 | 1 | 1 | 0 | Invertor |
 
+**Equations**  
+![waveform](images/equations.jpg)
+
 <hr>
 
 **Source code of process `p_d_latch`**
@@ -542,7 +545,10 @@ p_clk_gen : process
 ![waveform](images/t_rst.jpg)
 
 
+<hr>
 
+**Image of the shift register schematic**  
+![schematic](images/shift_register.png)
 
 
 <br>
