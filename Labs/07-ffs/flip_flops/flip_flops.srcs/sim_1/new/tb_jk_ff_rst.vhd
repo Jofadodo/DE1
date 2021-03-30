@@ -90,9 +90,6 @@ begin
         wait for 33 ns;
         
         s_rst <= '0';
-        wait for 53 ns;
-        
-        s_rst <= '1';
 
         wait;
     end process p_reset_gen;
