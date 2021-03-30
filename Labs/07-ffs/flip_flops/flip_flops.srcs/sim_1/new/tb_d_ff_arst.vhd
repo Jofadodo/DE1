@@ -99,7 +99,7 @@ begin
         
         wait for 14 ns;
         s_d <= '1';
-        wait for 10 ns;
+        wait for 30 ns;
         s_d <= '0';
         
         wait for 6 ns;
