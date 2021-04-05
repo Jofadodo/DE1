@@ -32,6 +32,7 @@ architecture testbench of tb_tlc_smart is
     signal s_reset      : std_logic;
     signal s_south      : std_logic_vector(3 - 1 downto 0);
     signal s_west       : std_logic_vector(3 - 1 downto 0);
+    signal s_sw         : std_logic_vector(2 - 1 downto 0);
 
 begin
     -- Connecting testbench signals with tlc entity (Unit Under Test)
@@ -40,7 +41,8 @@ begin
             clk     => s_clk_100MHz,
             reset   => s_reset,
             south_o => s_south,
-            west_o  => s_west
+            west_o  => s_west,
+            SW      => s_sw
         );
 
     --------------------------------------------------------------------
@@ -75,7 +77,21 @@ begin
     --------------------------------------------------------------------
     p_stimulus : process
     begin
-        -- No input data needed.
+        
+        s_sw <= "01";
+        wait for 1700 ns;
+        s_sw <= "10";
+        wait for 500 ns;
+        s_sw <= "11";
+        wait for 3000 ns;
+        s_sw <= "10";
+        wait for 1000 ns;
+        s_sw <= "00";
+        wait for 1000 ns;
+        s_sw <= "01";
+        wait for 300 ns;
+        s_sw <= "11";
+
         wait;
     end process p_stimulus;
 

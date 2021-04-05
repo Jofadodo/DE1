@@ -141,10 +141,13 @@ p_output_fsm : process(s_state)
 ```
 
 | **Current state** | **Direction South** | **Direction West** | **Delay** | **No cars** | **Cars WEST** | **Cars SOUTH** | **Both Directions** |
-| :-- | :-: | :-: | :-: | :-: | :-: | :-: |
-| `STOP1`      | red    | red | 1 sec | 1 sec | 1 sec | 1 sec |
-| `WEST_GO`    | red    | green | 4 sec | 1 sec | 1 sec | 1 sec |
-| `WEST_WAIT`  | red    | yellow | 2 sec | 1 sec | 1 sec | 1 sec |
-| `STOP2`      | red    | red | 1 sec | 1 sec | 1 sec | 1 sec |
-| `SOUTH_GO`   | green  | red | 4 sec | 1 sec | 1 sec | 1 sec |
-| `SOUTH_WAIT` | yellow | red | 2 sec | 1 sec | 1 sec | 1 sec |
+| :-- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| `STOP1`      | red    | red | 1 sec | `WAIT1` | `WAIT1` | `WAIT1` | `WAIT1` |
+| `WAIT1`      | red    | red | 0 sec | `WEST_GO` | `WEST_GO` | `SOUTH_GO` | `WEST_GO` |
+| `WEST_GO`    | red    | green | 4 sec | `WEST_GO` | `WEST_GO` | `WEST_WAIT` | `WEST_WAIT` |
+| `WEST_WAIT`  | red    | yellow | 2 sec | `STOP2` | `STOP2` | `STOP2` | `STOP2` |
+| `STOP2`      | red    | red | 1 sec | `WAIT2` | `WAIT2` | `WAIT2` | `WAIT2` |
+| `WAIT2`      | red    | red | 0 sec| `SOUTH_GO` | `WEST_GO` | `SOUTH_GO` | `SOUTH_GO` |
+| `SOUTH_GO`   | green  | red | 4 sec | `SOUTH_GO` | `SOUTH_WAIT` | `SOUTH_GO` | `SOUTH_WAIT` |
+| `SOUTH_WAIT` | yellow | red | 2 sec | `STOP1` | `STOP1` | `STOP1` | `STOP1` |
+

@@ -29,7 +29,7 @@ entity tlc_smart is
         clk     : in  std_logic;
         reset   : in  std_logic;
         
-        input : in std_logic_vector(2 - 1 downto 0);
+        SW      : in std_logic_vector(2 - 1 downto 0);
         -- Traffic lights (RGB LEDs) for two directions
         south_o : out std_logic_vector(3 - 1 downto 0);
         west_o  : out std_logic_vector(3 - 1 downto 0)
@@ -42,8 +42,8 @@ end entity tlc_smart;
 architecture Behavioral of tlc_smart is
 
     -- Define the states
-    type   t_state is (STOP1, WEST_GO,  WEST_WAIT,
-                       STOP2, SOUTH_GO, SOUTH_WAIT);
+    type   t_state is (STOP1, WAIT1, WEST_GO,  WEST_WAIT,
+                       STOP2, WAIT2, SOUTH_GO, SOUTH_WAIT);
     -- Define the signal that uses different states
     signal s_state  : t_state;
 
@@ -107,19 +107,29 @@ begin
                             s_cnt <= s_cnt + 1;
                         else
                             -- Move to the next state
-                            s_state <= WEST_GO;
+                            s_state <= WAIT1;
                             -- Reset local counter value
                             s_cnt   <= c_ZERO;
+                        end if;
+                        
+                    when WAIT1 =>
+                        if (SW = "10") then s_state <= SOUTH_GO;
+                            
+                        else s_state <= WEST_GO;
+
                         end if;
 
                     when WEST_GO =>
 
                         if (s_cnt < c_DELAY_4SEC) then
                             s_cnt <= s_cnt + 1;
-                        else
+                        elsif (SW = "10" or SW = "11") then
                             -- Move to the next state
                             s_state <= WEST_WAIT;
                             -- Reset local counter value
+                            s_cnt   <= c_ZERO;
+                        else
+                            s_state <= WEST_GO;
                             s_cnt   <= c_ZERO;
                         end if;
                         
@@ -140,19 +150,29 @@ begin
                             s_cnt <= s_cnt + 1;
                         else
                             -- Move to the next state
-                            s_state <= SOUTH_GO;
+                            s_state <= WAIT2;
                             -- Reset local counter value
                             s_cnt   <= c_ZERO;
+                        end if;
+                        
+                    when WAIT2 =>
+                        if (SW = "01") then s_state <= WEST_GO;
+                            
+                        else s_state <= SOUTH_GO;
+
                         end if;
                         
                     when SOUTH_GO =>
 
                         if (s_cnt < c_DELAY_4SEC) then
                             s_cnt <= s_cnt + 1;
-                        else
+                        elsif (SW = "01" or SW = "11") then
                             -- Move to the next state
                             s_state <= SOUTH_WAIT;
                             -- Reset local counter value
+                            s_cnt   <= c_ZERO;
+                        else
+                            s_state <= SOUTH_GO;
                             s_cnt   <= c_ZERO;
                         end if;
                         
