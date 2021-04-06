@@ -281,3 +281,12 @@ p_smart_traffic_fsm : process(clk)
         end if; -- Rising edge
     end process p_smart_traffic_fsm;
 ```
+
+
+<br>
+<br>
+<hr>
+
+
+
+<p align="center"> <a href="https://github.com/Jofadodo/Digital-electronics-1">GitHub repository</a> </p>
