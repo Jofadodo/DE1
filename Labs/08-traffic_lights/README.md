@@ -163,6 +163,9 @@ p_output_fsm : process(s_state)
 **State diagram**
 ![diagram](images/graf1.jpg)
 
+**Simulated waveforms of smart traffic lights**  
+![waveform](images/waveform_smart.jpg)
+
 **Listing of VHDL code of sequential process `p_smart_traffic_fsm`**
 ```vhdl
 p_smart_traffic_fsm : process(clk)
