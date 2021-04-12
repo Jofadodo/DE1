@@ -23,8 +23,9 @@
 | Hall_VCC | 3V3 |
 | Hall_GND | GND |
 
-north pole sonda...
-
-![waveform](images/7SEG.jpg)
-pridat 10k odpor pred vstup U12
+north pole sonda...  
+![waveform](images/7SEG.jpg)  
+pridat 10k odpor pred vstup U12  
 ![waveform](images/hall.jpg)
+
+display driver - upravit na 7 seg
