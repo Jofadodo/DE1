@@ -43,6 +43,8 @@ architecture testbench of tb_driver_7seg_4digits is
     signal s_seg_o      : std_logic_vector(7 - 1 downto 0);
     
     signal s_dig        : std_logic_vector(4 - 1 downto 0);
+    
+    signal s_decimal : integer range 0 to 999;
 
 begin
     -- Connecting testbench signals with driver_7seg_4digits entity
@@ -63,7 +65,9 @@ begin
 
             dp_o  => s_dp_o,
             seg_o => s_seg_o,
-            dig_o => s_dig
+            dig_o => s_dig,
+            
+            decimal => s_decimal
         );
 
     --------------------------------------------------------------------
@@ -103,12 +107,14 @@ begin
     begin
         report "Stimulus process started" severity note;
 
-        s_data3 <= "0011";
-        s_data2 <= "0001";
-        s_data1 <= "0100";
-        s_data0 <= "0010";
+        --s_data3 <= "0011";
+        --s_data2 <= "0001";
+        --s_data1 <= "0100";
+        --s_data0 <= "0010";
 
-        s_dp_i <= "0111";
+        --s_dp_i <= "0111";
+        
+        s_decimal <= 25;
         
 
         report "Stimulus process finished" severity note;

@@ -32,7 +32,9 @@ entity driver_7seg_4digits is
         -- Cathode values for individual segments
         seg_o   : out std_logic_vector(7 - 1 downto 0);
         -- Common anode signals to individual displays
-        dig_o   : out std_logic_vector(4 - 1 downto 0)
+        dig_o   : out std_logic_vector(4 - 1 downto 0);
+        
+        decimal : in integer range 0 to 999
     );
 end entity driver_7seg_4digits;
 
@@ -46,9 +48,23 @@ architecture Behavioral of driver_7seg_4digits is
     -- Internal 2-bit counter for multiplexing 4 digits
     signal s_cnt : std_logic_vector(2 - 1 downto 0);
     -- Internal 4-bit value for 7-segment decoder
-    signal s_hex : std_logic_vector(4 - 1 downto 0);
+    signal s_hex : integer range 0 to 999;
+    
+    signal s_decimal : integer range 0 to 999;
+    
+    signal s_zvysok1 : integer range 0 to 999;
+    signal s_zvysok2 : integer range 0 to 999;
+    signal s_zvysok3 : integer range 0 to 999;
+    signal s_zvysok4 : integer range 0 to 999;
+    
+    signal s_data0_i : integer range 0 to 999;
+    signal s_data1_i : integer range 0 to 999;
+    signal s_data2_i : integer range 0 to 999;
+    signal s_data3_i : integer range 0 to 999;
 
 begin
+    s_decimal <= decimal;
+    
     --------------------------------------------------------------------
     -- Instance (copy) of clock_enable entity generates an enable pulse
     -- every 4 ms
@@ -92,26 +108,45 @@ begin
     -- selecting data for a single digit, a decimal point signal, and 
     -- switches the common anodes of each display.
     --------------------------------------------------------------------
-    p_mux : process(s_cnt, data0_i, data1_i, data2_i, data3_i, dp_i)
+    p_mux_dec : process(s_decimal)    
+    begin
+        
+    
+        s_data0_i <= (s_decimal/1000);
+        s_zvysok1 <= (s_decimal - s_data0_i);
+        
+        s_data1_i <= (s_zvysok1/100);
+        s_zvysok2 <= (s_zvysok1 - s_data1_i);
+        
+        s_data2_i <= s_zvysok2 / 10;
+        s_zvysok3 <= (s_zvysok2 mod 10);
+        
+        s_data3_i <= s_zvysok3;
+        
+        
+    end process p_mux_dec;
+    
+    
+    p_mux : process(s_cnt, dp_i)
     begin
         case s_cnt is
             when "11" =>
-                s_hex <= data3_i;
+                s_hex <= s_data3_i;
                 dp_o  <= dp_i(3);
                 dig_o <= "0111";
 
             when "10" =>
-                s_hex <= data2_i;
+                s_hex <= s_data2_i;
                 dp_o  <= dp_i(2);
                 dig_o <= "1011";
 
             when "01" =>
-                s_hex <= data1_i;
+                s_hex <= s_data1_i;
                 dp_o  <= dp_i(1);
                 dig_o <= "1101";
 
             when others =>
-                s_hex <= data0_i;
+                s_hex <= s_data0_i;
                 dp_o  <= dp_i(0);
                 dig_o <= "1110";
         end case;
