@@ -48,19 +48,26 @@ architecture Behavioral of driver_7seg_4digits is
     -- Internal 2-bit counter for multiplexing 4 digits
     signal s_cnt : std_logic_vector(2 - 1 downto 0);
     -- Internal 4-bit value for 7-segment decoder
-    signal s_hex : integer range 0 to 999;
+    signal s_hex : integer range 0 to 9999;
     
-    signal s_decimal : integer range 0 to 999;
+    signal s_decimal : integer range 0 to 9999;
     
-    signal s_zvysok1 : integer range 0 to 999;
-    signal s_zvysok2 : integer range 0 to 999;
-    signal s_zvysok3 : integer range 0 to 999;
-    signal s_zvysok4 : integer range 0 to 999;
+    signal s_zvysok1 : integer range 0 to 9999;
+    signal s_zvysok2 : integer range 0 to 9999;
+    signal s_zvysok3 : integer range 0 to 9999;
+    signal s_zvysok4 : integer range 0 to 9999;
     
-    signal s_data0_i : integer range 0 to 999;
-    signal s_data1_i : integer range 0 to 999;
-    signal s_data2_i : integer range 0 to 999;
-    signal s_data3_i : integer range 0 to 999;
+    signal buff : integer:=0;
+    signal tousands : integer:=0;
+    signal hundreds : integer:=0;
+    signal decimals : integer:=0;
+    signal ones : integer:=0;
+    
+    signal s_data0_i : integer range 0 to 9999;
+    signal s_data1_i : integer range 0 to 9999;
+    signal s_data2_i : integer range 0 to 9999;
+    signal s_data3_i : integer range 0 to 9999;
+
 
 begin
     s_decimal <= decimal;
@@ -108,20 +115,45 @@ begin
     -- selecting data for a single digit, a decimal point signal, and 
     -- switches the common anodes of each display.
     --------------------------------------------------------------------
-    p_mux_dec : process(s_decimal)    
+    p_mux_dec : process(clk, s_decimal)    
     begin
         
     
-        s_data0_i <= (s_decimal/1000);
-        s_zvysok1 <= (s_decimal - s_data0_i);
+        --s_data0_i <= (s_decimal/1000);
+        --s_zvysok1 <= (s_decimal - s_data0_i);
         
-        s_data1_i <= (s_zvysok1/100);
-        s_zvysok2 <= (s_zvysok1 - s_data1_i);
+        --s_data1_i <= (s_zvysok1/100);
+        --s_zvysok2 <= (s_zvysok1 - s_data1_i);
         
-        s_data2_i <= s_zvysok2 / 10;
-        s_zvysok3 <= (s_zvysok2 mod 10);
+        --s_data2_i <= s_zvysok2 / 10;
+        --s_zvysok3 <= (s_zvysok2 mod 10);
         
-        s_data3_i <= s_zvysok3;
+        --s_data3_i <= s_zvysok3;
+
+
+        --while(s_decimal > buff) loop
+            if(s_decimal > (buff + 1000)) then 
+                buff <= buff + 1000;
+                tousands <= tousands + 1;
+            elsif(s_decimal > (buff + 100)) then 
+                buff <= buff + 100;
+                hundreds <= hundreds + 1;
+            elsif(s_decimal > (buff + 10)) then 
+                buff <= buff + 10;
+                decimals <= decimals + 1;
+            elsif(s_decimal >= (buff + 1)) then 
+                buff <= buff + 1;
+                ones <= ones + 1;
+            end if;
+        --end loop;
+
+        
+        if(s_decimal = buff) then
+            s_data3_i <= tousands;
+            s_data2_i <= hundreds;
+            s_data1_i <= decimals;
+            s_data0_i <= ones;
+        end if;
         
         
     end process p_mux_dec;

@@ -19,7 +19,7 @@ entity hex_7seg is
     port
     (
         
-        hex_i         : in  integer range 0 to 999;
+        hex_i         : in  integer range 0 to 9999;
         seg_o         : out std_logic_vector(7 - 1 downto 0)
         
     );
