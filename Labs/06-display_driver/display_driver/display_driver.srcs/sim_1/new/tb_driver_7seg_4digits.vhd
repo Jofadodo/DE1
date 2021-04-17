@@ -33,11 +33,6 @@ architecture testbench of tb_driver_7seg_4digits is
             
     signal s_reset      : std_logic;
     
-    signal s_data0      : std_logic_vector(4 - 1 downto 0);
-    signal s_data1      : std_logic_vector(4 - 1 downto 0);
-    signal s_data2      : std_logic_vector(4 - 1 downto 0);
-    signal s_data3      : std_logic_vector(4 - 1 downto 0);
-    
     signal s_dp_i       : std_logic_vector(4 - 1 downto 0);
     signal s_dp_o       : std_logic;
     signal s_seg_o      : std_logic_vector(7 - 1 downto 0);
@@ -55,11 +50,6 @@ begin
         port map(
             clk => s_clk_100MHz,
             reset => s_reset,
-            -- 4-bit
-            data0_i => s_data0,
-            data1_i => s_data1,
-            data2_i => s_data2,
-            data3_i => s_data3,
 
             dp_i => s_dp_i,
 
@@ -107,14 +97,9 @@ begin
     begin
         report "Stimulus process started" severity note;
 
-        --s_data3 <= "0011";
-        --s_data2 <= "0001";
-        --s_data1 <= "0100";
-        --s_data0 <= "0010";
-
-        --s_dp_i <= "0111";
         
         s_decimal <= 2548;
+        s_dp_i <= "0010";
         
 
         report "Stimulus process finished" severity note;

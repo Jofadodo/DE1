@@ -20,11 +20,6 @@ entity driver_7seg_4digits is
     port(
         clk     : in  std_logic;        -- Main clock
         reset   : in  std_logic;        -- Synchronous reset
-        -- 4-bit input values for individual digits
-        data0_i : in  std_logic_vector(4 - 1 downto 0);
-        data1_i : in  std_logic_vector(4 - 1 downto 0);
-        data2_i : in  std_logic_vector(4 - 1 downto 0);
-        data3_i : in  std_logic_vector(4 - 1 downto 0);
         -- 4-bit input value for decimal points
         dp_i    : in  std_logic_vector(4 - 1 downto 0);
         -- Decimal point for specific digit
@@ -51,11 +46,6 @@ architecture Behavioral of driver_7seg_4digits is
     signal s_hex : integer range 0 to 9999;
     
     signal s_decimal : integer range 0 to 9999;
-    
-    signal s_zvysok1 : integer range 0 to 9999;
-    signal s_zvysok2 : integer range 0 to 9999;
-    signal s_zvysok3 : integer range 0 to 9999;
-    signal s_zvysok4 : integer range 0 to 9999;
     
     signal buff : integer:=0;
     signal tousands : integer:=0;
