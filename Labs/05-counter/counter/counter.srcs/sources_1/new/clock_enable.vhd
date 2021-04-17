@@ -18,7 +18,7 @@ use ieee.numeric_std.all;   -- Package for arithmetic operations
 ------------------------------------------------------------------------
 entity clock_enable is
     generic(
-        g_MAX : natural := 10       -- Number of clk pulses to generate
+        g_MAX : integer := 10       -- Number of clk pulses to generate
                                     -- one enable signal period
     );  -- Note that there IS a semicolon between generic and port
         -- sections
@@ -35,7 +35,7 @@ end entity clock_enable;
 architecture Behavioral of clock_enable is
 
     -- Local counter
-    signal s_cnt_local : natural;
+    signal s_cnt_local : integer;
 
 begin
     --------------------------------------------------------------------

@@ -39,13 +39,15 @@ architecture testbench of tb_driver_7seg_4digits is
     
     signal s_dig        : std_logic_vector(4 - 1 downto 0);
     
-    signal s_decimal : integer range 0 to 9999;
+    signal s_decimal    : integer range 0 to 9999;
+    
+    
 
 begin
     -- Connecting testbench signals with driver_7seg_4digits entity
     -- (Unit Under Test)
     --- WRITE YOUR CODE HERE
-    
+        
     uut_driver_7seg_4digits : entity work.driver_7seg_4digits
         port map(
             clk => s_clk_100MHz,
@@ -65,7 +67,7 @@ begin
     --------------------------------------------------------------------
     p_clk_gen : process
     begin
-        while now < 750 ns loop         -- 75 periods of 100MHz clock
+        while now < 5 ms loop         -- 75 periods of 100MHz clock
             s_clk_100MHz <= '0';
             wait for c_CLK_100MHZ_PERIOD / 2;
             s_clk_100MHz <= '1';
@@ -88,6 +90,7 @@ begin
 
         s_reset <= '0';
         wait;
+        
     end process p_reset_gen;
 
     --------------------------------------------------------------------
