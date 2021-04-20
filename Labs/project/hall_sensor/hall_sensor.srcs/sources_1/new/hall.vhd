@@ -46,7 +46,7 @@ architecture Behavioral of hall is
 
 begin
 
-    time_stop : entity work.clock_enable
+    time_stop : entity work.time_enable
         port map(
 
     

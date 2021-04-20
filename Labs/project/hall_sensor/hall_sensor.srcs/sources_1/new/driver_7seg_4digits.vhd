@@ -59,11 +59,33 @@ architecture Behavioral of driver_7seg_4digits is
 
 begin
     s_decimal <= decimal;
+    
+    clk_en0 : entity work.clock_enable
+        generic map(
+            g_MAX => 4
+        )
+        port map(
+            clk   => clk,
+            reset => reset,
+            ce_o  => s_en
+        );
 
     hex2seg : entity work.hex_7seg
         port map(
             hex_i => s_hex,
             seg_o => seg_o
+        );
+        
+    bin_cnt0 : entity work.cnt_up_down
+        generic map(
+            g_CNT_WIDTH => 2
+       )
+        port map(
+            clk  => clk,
+            reset  => reset,
+            en_i  => s_en,
+            cnt_up_i  => '0',
+            cnt_o  => s_cnt
         );
 
     p_mux_dec : process(clk, s_decimal)    

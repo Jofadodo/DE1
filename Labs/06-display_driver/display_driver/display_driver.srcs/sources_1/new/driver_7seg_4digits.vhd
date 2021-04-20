@@ -47,11 +47,11 @@ architecture Behavioral of driver_7seg_4digits is
     
     signal s_decimal : integer range 0 to 9999;
     
-    signal buff : integer:=0;
+    signal buff     : integer:=0;
     signal tousands : integer:=0;
     signal hundreds : integer:=0;
     signal decimals : integer:=0;
-    signal ones : integer:=0;
+    signal ones     : integer:=0;
     
     signal s_data0_i : integer range 0 to 9999;
     signal s_data1_i : integer range 0 to 9999;
@@ -61,34 +61,21 @@ architecture Behavioral of driver_7seg_4digits is
 
 begin
     s_decimal <= decimal;
-    
-    --------------------------------------------------------------------
-    -- Instance (copy) of clock_enable entity generates an enable pulse
-    -- every 4 ms
-    clk_en0 : entity work.clock_enable
-        generic map(
-            g_MAX => 20
-        )
-        port map(
-            clk => clk,
-            reset => reset,
-            ce_o => s_en
-        );
 
     --------------------------------------------------------------------
     -- Instance (copy) of cnt_up_down entity performs a 2-bit down
     -- counter
-    bin_cnt0 : entity work.cnt_up_down
-        generic map(
-            g_CNT_WIDTH => 2
-        )
-        port map(
-            clk  => clk,
-            reset  => reset,
-            en_i  => s_en,
-            cnt_up_i  => '0',
-            cnt_o  => s_cnt
-        );
+    --bin_cnt0 : entity work.cnt_up_down
+    --    generic map(
+    --        g_CNT_WIDTH => 2
+    --   )
+    --    port map(
+    --        clk  => clk,
+    --        reset  => reset,
+    --        en_i  => s_en,
+    --        cnt_up_i  => '0',
+    --        cnt_o  => s_cnt
+    --    );
 
     --------------------------------------------------------------------
     -- Instance (copy) of hex_7seg entity performs a 7-segment display
@@ -107,35 +94,21 @@ begin
     --------------------------------------------------------------------
     p_mux_dec : process(clk, s_decimal)    
     begin
-        
-    
-        --s_data0_i <= (s_decimal/1000);
-        --s_zvysok1 <= (s_decimal - s_data0_i);
-        
-        --s_data1_i <= (s_zvysok1/100);
-        --s_zvysok2 <= (s_zvysok1 - s_data1_i);
-        
-        --s_data2_i <= s_zvysok2 / 10;
-        --s_zvysok3 <= (s_zvysok2 mod 10);
-        
-        --s_data3_i <= s_zvysok3;
 
+        if(s_decimal > (buff + 1000)) then 
+            buff <= buff + 1000;
+            tousands <= tousands + 1;
+        elsif(s_decimal > (buff + 100)) then 
+            buff <= buff + 100;
+            hundreds <= hundreds + 1;
+        elsif(s_decimal > (buff + 10)) then 
+            buff <= buff + 10;
+            decimals <= decimals + 1;
+        elsif(s_decimal >= (buff + 1)) then 
+            buff <= buff + 1;
+            ones <= ones + 1;
+        end if;
 
-        --while(s_decimal > buff) loop
-            if(s_decimal > (buff + 1000)) then 
-                buff <= buff + 1000;
-                tousands <= tousands + 1;
-            elsif(s_decimal > (buff + 100)) then 
-                buff <= buff + 100;
-                hundreds <= hundreds + 1;
-            elsif(s_decimal > (buff + 10)) then 
-                buff <= buff + 10;
-                decimals <= decimals + 1;
-            elsif(s_decimal >= (buff + 1)) then 
-                buff <= buff + 1;
-                ones <= ones + 1;
-            end if;
-        --end loop;
 
         
         if(s_decimal = buff) then
@@ -144,7 +117,6 @@ begin
             s_data1_i <= decimals;
             s_data0_i <= ones;
         end if;
-        
         
     end process p_mux_dec;
     
