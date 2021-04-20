@@ -32,12 +32,28 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity hall is
---  Port ( );
+    port(
+            clk     : in  std_logic;
+            reset   : in  std_logic;
+            run     : out std_logic;
+            number  : out integer
+        );
 end hall;
 
 architecture Behavioral of hall is
 
+    signal s_runtime : integer;
+
 begin
 
+    time_stop : entity work.clock_enable
+        port map(
+
+    
+            runtime => s_runtime,
+            clk     => clk,
+            reset   => reset,
+            run     => run
+        );
 
 end Behavioral;

@@ -18,10 +18,10 @@ use ieee.numeric_std.all;   -- Package for arithmetic operations
 ------------------------------------------------------------------------
 entity clock_enable is
     port(
-        clk   : in  std_logic;      -- Main clock
-        reset : in  std_logic;      -- Synchronous reset
-        run   : in  std_logic;      -- Synchronous reset
-        runtime  : out integer
+        clk        : in  std_logic;
+        reset      : in  std_logic;
+        run        : in  std_logic;
+        runtime    : out integer
     );
 end entity clock_enable;
 
@@ -30,22 +30,17 @@ end entity clock_enable;
 ------------------------------------------------------------------------
 architecture Behavioral of clock_enable is
 
-    -- Local counter
     signal s_runtime : integer;
 
 begin
-    --------------------------------------------------------------------
-    -- p_clk_ena:
-    -- Generate clock enable signal. By default, enable signal is low 
-    -- and generated pulse is always one clock long.
-    --------------------------------------------------------------------
+
     p_clk_ena : process(clk)
     begin
         if (rising_edge(clk) and run = '1') then
             s_runtime <= s_runtime + 1;
-        elsif (run = '0') then 
+        elsif (run = '0') then
             s_runtime <= s_runtime;
-        elsif (reset = '1') then 
+        elsif (reset = '1') then
             s_runtime <= 0;
         end if;
         
