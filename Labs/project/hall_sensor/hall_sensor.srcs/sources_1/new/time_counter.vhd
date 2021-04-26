@@ -30,21 +30,26 @@ end entity time_enable;
 ------------------------------------------------------------------------
 architecture Behavioral of time_enable is
 
-    signal s_runtime : integer;
+    signal s_runtime : integer:=0;
+    signal timing : integer:=0;
 
 begin
 
     p_time_ena : process(clk)
     begin
-        if (rising_edge(clk) and run = '1') then
+    
+        if(timing < 100 and reset = '0') then
+            timing <= timing + 1;
+        elsif(timing = 100 and reset = '0') then 
             s_runtime <= s_runtime + 1;
-        elsif (run = '0') then
-            s_runtime <= s_runtime;
+            timing <= 0;
         elsif (reset = '1') then
-            s_runtime <= 0;
+                s_runtime <= 0;
+                timing <= 0;
         end if;
         
         runtime <= s_runtime;
+        
     end process p_time_ena;
 
 end architecture Behavioral;

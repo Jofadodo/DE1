@@ -24,7 +24,7 @@
 | Hall_GND | GND |
 
 north pole sonda...  
-![waveform](images/7SEG.jpg)  
+![waveform](images/1.png)  
 pridat 10k odpor pred vstup U12  
 ![waveform](images/hall.jpg)
 
