@@ -29,3 +29,4 @@ pridat 10k odpor pred vstup U12
 ![waveform](images/hall.jpg)
 
 display driver - upravit na 7 seg
+skuska
