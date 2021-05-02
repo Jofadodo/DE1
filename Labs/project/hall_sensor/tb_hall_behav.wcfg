@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="76415150000fs"></ZoomStartTime>
+      <ZoomEndTime time="76416883501fs"></ZoomEndTime>
+      <Cursor1Time time="76415231000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="230"></NameColumnWidth>
+      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb_top/uut_hall/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_hall/s_runtime" type="other">
+      <obj_property name="ElementShortName">s_runtime</obj_property>
+      <obj_property name="ObjectShortName">s_runtime</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_hall/speed" type="other">
+      <obj_property name="ElementShortName">speed</obj_property>
+      <obj_property name="ObjectShortName">speed</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_hall/distance" type="other">
+      <obj_property name="ElementShortName">distance</obj_property>
+      <obj_property name="ObjectShortName">distance</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_hall/s_mode" type="logic">
+      <obj_property name="ElementShortName">s_mode</obj_property>
+      <obj_property name="ObjectShortName">s_mode</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_hall/number" type="other">
+      <obj_property name="ElementShortName">number</obj_property>
+      <obj_property name="ObjectShortName">number</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_driver_7seg_4digits/seg_o" type="array">
+      <obj_property name="ElementShortName">seg_o[6:0]</obj_property>
+      <obj_property name="ObjectShortName">seg_o[6:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_driver_7seg_4digits/dig_o" type="array">
+      <obj_property name="ElementShortName">dig_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dig_o[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_driver_7seg_4digits/dp_i" type="array">
+      <obj_property name="ElementShortName">dp_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dp_i[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_hall/mode_BTN" type="logic">
+      <obj_property name="ElementShortName">mode_BTN</obj_property>
+      <obj_property name="ObjectShortName">mode_BTN</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_top/uut_hall/reset_BTN" type="logic">
+      <obj_property name="ElementShortName">reset_BTN</obj_property>
+      <obj_property name="ObjectShortName">reset_BTN</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

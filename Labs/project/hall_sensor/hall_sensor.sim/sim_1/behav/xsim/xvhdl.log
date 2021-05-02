@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/project/hall_sensor/hall_sensor.srcs/sources_1/new/driver_7seg_4digits.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'driver_7seg_4digits'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/project/hall_sensor/hall_sensor.srcs/sources_1/new/hall.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hall'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jofad/Documents/GitHub/VS Code/Digital-electronics-1/Labs/project/hall_sensor/hall_sensor.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top'
